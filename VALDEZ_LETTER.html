@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Love Letter ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#501618,#9e3e41,#e06d71);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Floating Hearts */
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-100px;
+    color:#ff4f81;
+    font-size:20px;
+    animation:float 10s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Login */
+
+#loginBox{
+    width:340px;
+    background:rgb(245, 155, 155);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+#loginBox h1{
+    color:#813033;
+    margin-bottom:15px;
+}
+
+
+input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:2px solid #ffb6c1;
+    margin:15px 0;
+    outline:none;
+    font-size:16px;
+}
+
+button{
+    background:#813033;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff2e63;
+    transform:scale(1.05);
+}
+
+/* Letter */
+
+#letter{
+    display:none;
+    width:90%;
+    max-width:800px;
+    background:rgb(245, 155, 155);
+    border-radius:20px;
+    overflow:auto;
+    max-height:90vh;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    animation:pop .8s;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+h2{
+    color:#ff4f81;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.message{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    text-align:justify;
+}
+
+.gallery{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    color:#ff4f81;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div id="loginBox">
+    <h1> 😊 </h1>
+    <p>Parag</p>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password">
+
+    <button onclick="unlock()">Open Letter</button>
+
+    <p id="error" style="color:red;margin-top:10px;"></p>
+</div>
+
+<div id="letter">
+
+<h2>To My Love ❤️</h2>
+
+<div class="message">
+
+<p>
+My Love,
+</p>
+
+<br>
+
+<p>
+If you're reading this, it means you've unlocked one of the most special places in my heart.
+Every day with you is a blessing that I never take for granted.
+You make ordinary moments feel magical, and your smile is still my favorite view.
+</p>
+
+<br>
+
+<p>
+I know I don't always express my feelings as well as I should, but please know that my love for you is endless and unwavering.
+You are my best friend, my confidant, and the love of my life. I can't imagine my life without you, and I promise to always cherish and protect the love we share.
+To me, you are the "Aphrodite" of my life—someone so captivating, graceful, and beautiful that every day I find myself falling in love with you all over again.
+I want our hearts to "intertwine", growing through every joy, every challenge, and every uncertainty. I hope our love remains deep, enduring, and unwavering, no matter where life takes us.
+And above all, I want to "be with you" for the rest of my life—to build a home, create countless memories, chase dreams together, and grow old by your side. Every chapter of my life is one I hope to spend with you, because loving you is the easiest and most beautiful choice I'll ever make.
+</p>
+
+<br>
+
+<p>
+Thank you for being patient with me, for believing in me, and for loving me even during my imperfect days.
+I promise to keep choosing you every single day, to support your dreams, and to create beautiful memories together.
+</p>
+
+<br>
+
+<p>
+No matter how much time passes, my love for you will continue to grow.
+You're my happiness, my peace, and my favorite person in the world.
+</p>
+
+<br>
+
+<p style="text-align:center;font-size:22px;color:#ff4f81;">
+I love you forever. ❤️
+</p>
+
+</div>
+
+<div class="gallery">
+
+<img src="photo1.jpg" alt="Photo 1">
+
+<img src="photo2.jpg" alt="Photo 2">
+
+<img src="photo3.jpg" alt="Photo 3">
+
+<video width="100%" height="250" controls>
+  <source src="kababuyan.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+
+</div>
+
+<footer>
+Para sa'yo 'to, man 💕
+</footer>
+
+</div>
+
+<!-- Optional Background Music -->
+<audio autoplay loop>
+<source src="Intertwine-OverOctober.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const PASSWORD="April";
+
+function unlock(){
+
+const pass=document.getElementById("password").value;
+
+if(pass===PASSWORD){
+
+document.getElementById("loginBox").style.display="none";
+document.getElementById("letter").style.display="block";
+
+}else{
+
+document.getElementById("error").innerHTML="😒";
+
+}
+
+}
+
+// Floating Hearts
+
+const hearts=document.getElementById("hearts");
+
+for(let i=0;i<40;i++){
+
+const heart=document.createElement("span");
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+heart.style.fontSize=(Math.random()*25+15)+"px";
+
+heart.style.animationDelay=Math.random()*5+"s";
+
+hearts.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
