@@ -284,6 +284,19 @@ Para sa'yo 'to, man 💕
 
 <script>
 
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = "⏸ Pause Music";
+    } else {
+        music.pause();
+        musicBtn.innerHTML = "▶ Play Music";
+    }
+}
+    
 const PASSWORD="24";
 
 function unlock(){
@@ -294,9 +307,6 @@ if(pass===PASSWORD){
 
 document.getElementById("loginBox").style.display="none";
 document.getElementById("letter").style.display="block";
-
-music.play();
-        musicBtn.innerHTML = "⏸ Pause Music";
 
 
 }else{
